@@ -1,0 +1,15 @@
+import speech_recognition as sr 
+  
+AUDIO_FILE = ("testing.wav") 
+  
+# use the audio file as the audio source 
+  
+r = sr.Recognizer() 
+  
+with sr.AudioFile(AUDIO_FILE) as source: 
+    #reads the audio file. Here we use record instead of 
+    #listen 
+    audio = r.record(source)   
+  
+print("The audio file contains: {}".format(r.recognize_google(audio,language="my-MM")) 
+ 
