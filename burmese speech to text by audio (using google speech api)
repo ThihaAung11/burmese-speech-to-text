@@ -11,5 +11,5 @@ with sr.AudioFile(AUDIO_FILE) as source:
     #listen 
     audio = r.record(source)   
   
-print("The audio file contains: {}".format(r.recognize_google(audio,language="my-MM")))
+print("The audio file contains:"+r.recognize_google(audio,language="my-MM"))
  
